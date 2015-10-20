@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+int main(){
+  cout << "Give me 10 numbers please: " << endl;
+  vector<float> pifi(10);
+  for (int f=0; f<10; f++){
+    cin>> pifi[f];
+  }
+  float vie=0;
+  for (int i=0; i<10; i++){
+    vie= vie + pifi[i];
+  }
+  float prom=vie/pifi.size();
+  float via=0;
+  for (int i=0; i<pifi.size(); i++){
+    via = (pow((pifi[i]-prom), 2))+via;
+  }
+  via=sqrt(via/pifi.size());
+
+  cout<< "La suma es: " << vie << endl;
+  cout << "El promedio es: " << prom << endl;
+  cout << "La desviación estander es; " << via << endl;
+}
